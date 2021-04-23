@@ -7,7 +7,7 @@ export class Table {
   }
 
   _buildHeader() {
-    let headerHTML = '';
+    let headerHTML = "";
     this.head.forEach((columnName) => {
       headerHTML += `<th>${columnName}</th>`;
     });
@@ -23,13 +23,13 @@ export class Table {
   }
 
   _buildRowCells(row) {
-    let rowHTML = '';
+    let rowHTML = "";
     row.forEach((cell) => (rowHTML += `<td>${cell}</td>`));
     return rowHTML;
   }
 
   _buildTableContent() {
-    let contentHTML = '';
+    let contentHTML = "";
     this.rows.forEach((row) => {
       const cellsHTML = this._buildRowCells(row);
       const rowHTML = `<tr>${cellsHTML}</tr>`;
